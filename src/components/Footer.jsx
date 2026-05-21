@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src="/logo_copy.png" alt="Aaliya Travels & Tours" className="footer-logo-img" />
+              <img src="/logo_copy.png" alt="Aaliya Travels & Tours" className="footer-logo-img" loading="lazy" />
             </div>
             <p>Human Resources Solution Providers & Recruitment Specialists. Over 28 years in the foreign employment industry — serving employers across 12 countries with 400,000+ workers recruited.</p>
             <div className="footer-socials">

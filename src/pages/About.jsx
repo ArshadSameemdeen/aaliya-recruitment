@@ -159,7 +159,7 @@ export default function About() {
             {certificates.map((c, i) => (
               <div key={i} className="cert-card" onClick={() => setLightbox(i)}>
                 <div className="cert-img-wrap">
-                  <img src={c.img} alt={c.title} />
+                  <img src={c.img} alt={c.title} loading="lazy" />
                   <div className="cert-overlay">
                     <span>Click to view</span>
                   </div>
@@ -225,7 +225,7 @@ export default function About() {
             {team.map((member, i) => (
               <div key={i} className="team-card">
                 {member.photo
-                  ? <img src={member.photo} alt={member.name} className="team-photo" />
+                  ? <img src={member.photo} alt={member.name} className="team-photo" loading="lazy" />
                   : <div className="team-avatar">{member.initial}</div>
                 }
                 <h3>{member.name}</h3>
@@ -248,7 +248,7 @@ export default function About() {
           <div className="office-gallery">
             {officePhotos.map((p, i) => (
               <div key={i} className={`office-photo-wrap ${i === 0 ? 'office-photo-featured' : ''}`}>
-                <img src={p.img} alt={p.label} />
+                <img src={p.img} alt={p.label} loading="lazy" />
                 <div className="office-photo-label">{p.label}</div>
               </div>
             ))}
