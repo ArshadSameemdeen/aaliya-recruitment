@@ -64,11 +64,11 @@ const milestones = [
 ]
 
 const team = [
-  { name: 'Yaseer Arafath', role: 'Managing Director', photo: '/office2.jpg', note: '28+ years in foreign employment. Fluent in Arabic, English, Tamil & Sinhala. Holds embassy submission cards from Kuwait & Saudi Arabia.' },
+  { name: 'Yaseer Arafath', role: 'Managing Director', photo: '/arafath.png', note: '28+ years in foreign employment. Fluent in Arabic, English, Tamil & Sinhala. Holds embassy submission cards from Kuwait & Saudi Arabia.' },
   { name: 'Aysha Manal', role: 'Foreign Relations Manager', initial: 'A', note: '24+ years at Sri Lankan embassies in KSA, Kuwait, Oman & UAE. Appointed by the Ministry of Foreign Employment Promotion & Welfare.' },
-  { name: 'Afzal Faris', role: 'Recruitment Operations Manager', initial: 'AF', note: 'Oversees end-to-end recruitment operations — candidate sourcing, selection coordination, and employer liaison across all active markets.' },
-  { name: 'Mrs. Fathima Amal', role: 'Legal Manager (LLB/LLM)', initial: 'FA', note: 'Ensures full legal compliance across all placements. Manages employment contracts, regulatory documentation, and dispute resolution under Sri Lankan and international employment law.' },
-  { name: 'Arshad Sameemdeen', role: 'Digital & Marketing Manager', initial: 'AS', note: 'Leads digital strategy, online presence, and marketing initiatives — connecting international employers with Aaliya\'s recruitment services across digital channels.' },
+  { name: 'Afzal Faris', role: 'Recruitment Operations Manager', photo: '/afzal.jpeg', note: 'Oversees end-to-end recruitment operations — candidate sourcing, selection coordination, and employer liaison across all active markets.' },
+  { name: 'Mrs. Fathima Amal', role: 'Legal Manager (LLB/LLM)', photo: '/amal.jpeg', note: 'Ensures full legal compliance across all placements. Manages employment contracts, regulatory documentation, and dispute resolution under Sri Lankan and international employment law.' },
+  { name: 'Arshad Sameemdeen', role: 'Digital & Marketing Manager', photo: '/arshad.png', note: 'Leads digital strategy, online presence, and marketing initiatives — connecting international employers with Aaliya\'s recruitment services across digital channels.' },
 ]
 
 const officePhotos = [
