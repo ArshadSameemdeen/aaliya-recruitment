@@ -8,8 +8,8 @@ import './Contact.css'
 
 const contactInfo = [
   { icon: <MapPin size={20} />, title: 'Office', lines: ['67, 2/1, Deans Road', 'Colombo 10, Sri Lanka'] },
-  { icon: <Phone size={20} />, title: 'Phone', lines: ['+94 773 041 888', '+94 766 923 573', 'Tel: +94 112 662 933'] },
-  { icon: <Mail size={20} />, title: 'Email', lines: ['aaliyatravels3101@gmail.com', 'manalarafath@gmail.com'] },
+  { icon: <Phone size={20} />, title: 'Phone', lines: ['+94 773 041 888', '+94 756 041 888 (WhatsApp)', 'Tel: +94 112 662 933'] },
+  { icon: <Mail size={20} />, title: 'Email', lines: ['aaliyatravels3101@gmail.com', 'arafath1970@gmail.com'] },
   { icon: <Clock size={20} />, title: 'Hours', lines: ['Mon–Fri: 8:30am – 5:30pm', 'Sat: 9:00am – 1:00pm'] },
 ]
 

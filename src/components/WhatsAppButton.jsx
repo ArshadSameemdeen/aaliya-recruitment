@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './WhatsAppButton.css'
 
-const WA_NUMBER = '94773041888'
+const WA_NUMBER = '94756041888'
 const WA_MESSAGE = encodeURIComponent("Hello! I found you on your website and would like to inquire about your services.")
 
 export default function WhatsAppButton() {
