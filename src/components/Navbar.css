@@ -1,0 +1,126 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: white;
+  box-shadow: 0 2px 20px rgba(74,24,130,0.12);
+  padding: 12px 0;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.navbar.scrolled .navbar-logo-img {
+  filter: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.navbar-links li a:not(.btn) {
+  display: block;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+
+.navbar-links li a:not(.btn):hover,
+.navbar-links li a:not(.btn).active {
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.navbar.scrolled .navbar-links li a:not(.btn) {
+  color: var(--text-mid);
+}
+
+.navbar.scrolled .navbar-links li a:not(.btn):hover,
+.navbar.scrolled .navbar-links li a:not(.btn).active {
+  color: var(--primary);
+  background: rgba(74, 24, 130, 0.06);
+}
+
+.navbar-cta {
+  margin-left: 8px;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 4px;
+}
+
+.navbar.scrolled .navbar-toggle {
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    background: white;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 16px 24px 24px;
+    gap: 4px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    align-items: stretch;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-cta {
+    margin-left: 0 !important;
+    margin-top: 8px;
+    text-align: center;
+    justify-content: center;
+  }
+}

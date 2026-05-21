@@ -1,0 +1,348 @@
+.about-hero {
+  background: linear-gradient(135deg, #2e0d52, #4a1882);
+  padding: 160px 0 80px;
+  text-align: center;
+  color: white;
+}
+
+.about-hero .tag {
+  background: rgba(232,160,32,0.2);
+  color: var(--accent);
+  border: 1px solid rgba(232,160,32,0.3);
+}
+
+.about-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4.5vw, 52px);
+  color: white;
+  margin: 16px 0;
+}
+
+.about-hero p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.75);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* Story */
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.inline-tag {
+  display: inline-block;
+  background: rgba(26,79,138,0.08);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.about-story-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  color: var(--text-dark);
+  margin-bottom: 18px;
+}
+
+.about-story-text p {
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.about-story-visual {
+  position: relative;
+}
+
+.about-image-bg {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 20px;
+  height: 400px;
+  background-image:
+    linear-gradient(135deg, var(--primary-dark), var(--primary)),
+    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='0.04'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.about-stat-badge {
+  position: absolute;
+  background: white;
+  border-radius: 14px;
+  padding: 18px 24px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.about-stat-badge strong {
+  display: block;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.about-stat-badge span {
+  font-size: 12px;
+  color: var(--text-mid);
+}
+
+.top-badge {
+  top: 28px;
+  right: -24px;
+}
+
+.bottom-badge {
+  bottom: 28px;
+  left: -24px;
+  border-left: 4px solid var(--accent);
+}
+
+/* Trust Pillars */
+.trust-pillar-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.trust-pillar-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.trust-pillar-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(26,79,138,0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.trust-pillar-card h3 {
+  font-size: 16px;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.trust-pillar-card p {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+/* Guarantees */
+.guarantees-section {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.guarantees-header .inline-tag { margin-bottom: 14px; }
+
+.guarantees-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 2.8vw, 32px);
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.guarantees-header p {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+.guarantees-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guarantee-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--bg-light);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.guarantee-check {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.guarantee-item span {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+/* Timeline */
+.timeline {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 110px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.timeline-year {
+  width: 90px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  padding-top: 2px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--accent);
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-event {
+  font-size: 14px;
+  color: var(--text-mid);
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+/* Team */
+.team-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.team-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.team-avatar {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 auto 14px;
+}
+
+.team-card h3 {
+  font-size: 15px;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.team-note {
+  font-size: 12px;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+/* About CTA */
+.about-cta {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  padding: 72px 0;
+}
+
+.about-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3vw, 34px);
+  color: white;
+  margin-bottom: 6px;
+}
+
+.about-cta p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+}
+
+.about-cta-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .about-story { grid-template-columns: 1fr; gap: 40px; }
+  .about-story-visual { display: none; }
+  .guarantees-section { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .about-cta-inner { flex-direction: column; text-align: center; }
+  .about-cta-actions { justify-content: center; }
+  .timeline::before { left: 80px; }
+  .timeline-year { width: 65px; font-size: 12px; }
+}
