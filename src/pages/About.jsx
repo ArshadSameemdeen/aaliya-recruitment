@@ -66,8 +66,8 @@ const milestones = [
 const team = [
   { name: 'Yaseer Arafath', role: 'Managing Director', photo: '/arafath.png', note: '28+ years in foreign employment. Fluent in Arabic, English, Tamil & Sinhala. Holds embassy submission cards from Kuwait & Saudi Arabia.' },
   { name: 'Aysha Manal', role: 'Foreign Relations Manager', initial: 'A', note: 'Manages employer relationships and overseas coordination across the Middle East and Asia — ensuring smooth communication between clients and deployed workers.' },
-  { name: 'Afzal Faris', role: 'Recruitment Operations Manager', photo: '/afzal.jpeg', note: 'Oversees end-to-end recruitment operations — candidate sourcing, selection coordination, and employer liaison across all active markets.' },
   { name: 'Mrs. Fathima Amal', role: 'Legal Manager (LLB/LLM)', photo: '/amal.jpeg', note: 'Ensures full legal compliance across all placements. Manages employment contracts, regulatory documentation, and dispute resolution under Sri Lankan and international employment law.' },
+  { name: 'Afzal Faris', role: 'Recruitment Operations Manager', photo: '/afzal.jpeg', note: 'Oversees end-to-end recruitment operations — candidate sourcing, selection coordination, and employer liaison across all active markets.' },
   { name: 'Arshad Sameemdeen', role: 'Sales & Marketing Manager', photo: '/arshad.png', note: 'Drives business development, client acquisition, and marketing strategy — building relationships with international employers and expanding Aaliya\'s reach across new markets.' },
 ]
 
@@ -224,7 +224,7 @@ export default function About() {
             <h2>The People You'll Work With</h2>
             <p>Experienced professionals who understand your needs as an international employer.</p>
           </div>
-          <div className="grid-3" style={{ maxWidth: '960px', margin: '0 auto' }}>
+          <div className="team-grid">
             {team.map((member, i) => (
               <div key={i} className="team-card">
                 {member.photo

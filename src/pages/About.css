@@ -454,6 +454,29 @@
   .cert-grid { grid-template-columns: 1fr; }
 }
 
+/* Team grid — centres the last row automatically */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.team-grid .team-card {
+  width: calc(33.333% - 22px);
+  min-width: 220px;
+}
+
+@media (max-width: 768px) {
+  .team-grid .team-card { width: calc(50% - 16px); }
+}
+
+@media (max-width: 500px) {
+  .team-grid .team-card { width: 100%; }
+}
+
 /* Team photo */
 .team-photo {
   width: 100px;
