@@ -301,6 +301,231 @@
   line-height: 1.4;
 }
 
+/* Certifications */
+.cert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 12px rgba(74,24,130,0.06);
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(74,24,130,0.14);
+}
+
+.cert-img-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #f5f3f9;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.cert-img-wrap img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-img-wrap img {
+  transform: scale(1.03);
+}
+
+.cert-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(74,24,130,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cert-card:hover .cert-overlay {
+  opacity: 1;
+}
+
+.cert-overlay span {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  background: rgba(0,0,0,0.3);
+  padding: 8px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.cert-info {
+  padding: 20px 24px 24px;
+}
+
+.cert-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.cert-subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.cert-desc {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+
+/* Lightbox */
+.cert-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10,4,20,0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fade-in 0.2s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.cert-lightbox img {
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  animation: scale-in 0.2s ease;
+}
+
+@keyframes scale-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.cert-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.cert-lightbox-close:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 700px) {
+  .cert-grid { grid-template-columns: 1fr; }
+}
+
+/* Team photo */
+.team-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  margin: 0 auto 14px;
+  display: block;
+  border: 3px solid var(--border);
+}
+
+/* Office Gallery */
+.office-gallery {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 16px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.office-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.office-photo-wrap img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.office-photo-featured img {
+  height: 280px;
+}
+
+.office-photo-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.office-photo-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(10,4,20,0.65));
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 24px 14px 12px;
+}
+
+@media (max-width: 768px) {
+  .office-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .office-photo-featured {
+    grid-column: 1 / -1;
+  }
+  .office-photo-wrap img,
+  .office-photo-featured img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 500px) {
+  .office-gallery { grid-template-columns: 1fr; }
+}
+
 /* About CTA */
 .about-cta {
   background: linear-gradient(135deg, var(--primary-dark), var(--primary));

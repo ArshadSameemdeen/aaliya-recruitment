@@ -1,6 +1,22 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CheckCircle, ArrowRight, ShieldCheck, Award, Globe, TrendingUp } from 'lucide-react'
+import { CheckCircle, ArrowRight, ShieldCheck, Award, Globe, TrendingUp, X } from 'lucide-react'
 import './About.css'
+
+const certificates = [
+  {
+    img: '/licence.jpeg',
+    title: 'SLBFE Licence — Foreign Employment Agency',
+    subtitle: 'Licence No. 3101 · Valid 2026',
+    desc: 'Issued by the Sri Lanka Bureau of Foreign Employment under the Foreign Employment Act No. 21 of 1985.',
+  },
+  {
+    img: '/licence2.jpeg',
+    title: 'ALFEA Compliance Certificate',
+    subtitle: 'Code of Good Conduct · SLBFE License 3101',
+    desc: 'Member of the Association of Licensed Foreign Employment Agencies, pledging compliance with the Code of Good Conduct.',
+  },
+]
 
 const trustPillars = [
   {
@@ -48,13 +64,27 @@ const milestones = [
 ]
 
 const team = [
-  { name: 'Yaseer Arafath', role: 'Managing Director', initial: 'Y', note: '28+ years in foreign employment. Fluent in Arabic, English, Tamil & Sinhala. Holds embassy submission cards from Kuwait & Saudi Arabia.' },
-  { name: 'M.H. Husain Asaff', role: 'Foreign Relations Manager', initial: 'H', note: '24+ years at Sri Lankan embassies in KSA, Kuwait, Oman & UAE. Appointed by the Ministry of Foreign Employment Promotion & Welfare.' },
+  { name: 'Yaseer Arafath', role: 'Managing Director', photo: '/office2.jpg', note: '28+ years in foreign employment. Fluent in Arabic, English, Tamil & Sinhala. Holds embassy submission cards from Kuwait & Saudi Arabia.' },
+  { name: 'Aysha Manal', role: 'Foreign Relations Manager', initial: 'A', note: '24+ years at Sri Lankan embassies in KSA, Kuwait, Oman & UAE. Appointed by the Ministry of Foreign Employment Promotion & Welfare.' },
+]
+
+const officePhotos = [
+  { img: '/office3.jpg', label: 'Our Office, Colombo 10' },
+  { img: '/office1.jpg', label: 'Our Team at Work' },
+  { img: '/office4.jpg', label: 'Application Processing' },
 ]
 
 export default function About() {
+  const [lightbox, setLightbox] = useState(null)
+
   return (
     <div className="about">
+      {lightbox !== null && (
+        <div className="cert-lightbox" onClick={() => setLightbox(null)}>
+          <button className="cert-lightbox-close" onClick={() => setLightbox(null)}><X size={24} /></button>
+          <img src={certificates[lightbox].img} alt={certificates[lightbox].title} onClick={e => e.stopPropagation()} />
+        </div>
+      )}
       <section className="page-hero about-hero">
         <div className="container">
           <span className="tag accent-tag">About Us</span>
@@ -117,6 +147,34 @@ export default function About() {
         </div>
       </section>
 
+      {/* Certifications */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <span className="tag">Verified & Licensed</span>
+            <h2>Our Official Certifications</h2>
+            <p>Every placement is backed by full regulatory compliance. Click any certificate to view it in full.</p>
+          </div>
+          <div className="cert-grid">
+            {certificates.map((c, i) => (
+              <div key={i} className="cert-card" onClick={() => setLightbox(i)}>
+                <div className="cert-img-wrap">
+                  <img src={c.img} alt={c.title} />
+                  <div className="cert-overlay">
+                    <span>Click to view</span>
+                  </div>
+                </div>
+                <div className="cert-info">
+                  <h4>{c.title}</h4>
+                  <p className="cert-subtitle">{c.subtitle}</p>
+                  <p className="cert-desc">{c.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Guarantees */}
       <section className="section">
         <div className="container guarantees-section">
@@ -166,10 +224,32 @@ export default function About() {
           <div className="grid-2" style={{ maxWidth: '720px', margin: '0 auto' }}>
             {team.map((member, i) => (
               <div key={i} className="team-card">
-                <div className="team-avatar">{member.initial}</div>
+                {member.photo
+                  ? <img src={member.photo} alt={member.name} className="team-photo" />
+                  : <div className="team-avatar">{member.initial}</div>
+                }
                 <h3>{member.name}</h3>
                 <p className="team-role">{member.role}</p>
                 <p className="team-note">{member.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Office Gallery */}
+      <section className="section" style={{ background: 'var(--bg-light)' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="tag">Our Office</span>
+            <h2>A Real Office. A Real Team.</h2>
+            <p>Based in Colombo 10, Sri Lanka — visit us or reach out anytime.</p>
+          </div>
+          <div className="office-gallery">
+            {officePhotos.map((p, i) => (
+              <div key={i} className={`office-photo-wrap ${i === 0 ? 'office-photo-featured' : ''}`}>
+                <img src={p.img} alt={p.label} />
+                <div className="office-photo-label">{p.label}</div>
               </div>
             ))}
           </div>

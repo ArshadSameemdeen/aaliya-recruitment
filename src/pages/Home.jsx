@@ -255,11 +255,13 @@ export default function Home() {
         <div className="container trust-bar-inner">
           <div className="trust-item"><Award size={20} /> <span>SLBFE Licensed · License No. 3101</span></div>
           <div className="trust-divider" />
-          <div className="trust-item"><ShieldCheck size={20} /> <span>ISO Certified Processes</span></div>
+          <div className="trust-item"><ShieldCheck size={20} /> <span>ALFEA Code of Good Conduct Certified</span></div>
           <div className="trust-divider" />
           <div className="trust-item"><Globe size={20} /> <span>Active in 12 Countries Worldwide</span></div>
           <div className="trust-divider" />
           <div className="trust-item"><Users size={20} /> <span>46+ Employer Clients Worldwide</span></div>
+          <div className="trust-divider" />
+          <Link to="/about" className="trust-item trust-certs-link"><FileCheck size={20} /> <span>View Our Certificates</span></Link>
         </div>
       </section>
 

@@ -382,6 +382,20 @@
 
 .trust-item svg { color: var(--accent); flex-shrink: 0; }
 
+.trust-certs-link {
+  text-decoration: none;
+  border: 1px solid rgba(232,160,32,0.4);
+  padding: 5px 14px;
+  border-radius: 100px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.trust-certs-link:hover {
+  background: rgba(232,160,32,0.12);
+  border-color: rgba(232,160,32,0.7);
+  color: white;
+}
+
 .trust-divider {
   width: 1px;
   height: 20px;
