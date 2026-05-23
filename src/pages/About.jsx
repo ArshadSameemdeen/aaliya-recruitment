@@ -64,11 +64,11 @@ const milestones = [
 ]
 
 const team = [
-  { name: 'Yaseer Arafath', role: 'Managing Director', photo: '/arafath.png', note: '28+ years in foreign employment. Fluent in Arabic, English, Tamil & Sinhala. Holds embassy submission cards from Kuwait & Saudi Arabia.' },
-  { name: 'Aysha Manal', role: 'Foreign Relations Manager', initial: 'A', note: 'Manages employer relationships and overseas coordination across the Middle East and Asia — ensuring smooth communication between clients and deployed workers.' },
+  { name: 'Yaseer Arafath', role: 'Managing Director', photo: '/arafath.jpg', note: '28+ years in foreign employment. Fluent in Arabic, English, Tamil & Sinhala. Holds embassy submission cards from Kuwait & Saudi Arabia.' },
+  { name: 'Aysha Manal', role: 'Foreign Relations Manager', photo: '/aysha.jpg', note: 'Manages employer relationships and overseas coordination across the Middle East and Asia — ensuring smooth communication between clients and deployed workers.' },
   { name: 'Mrs. Fathima Amal', role: 'Legal Manager (LLB/LLM)', photo: '/amal.jpeg', note: 'Ensures full legal compliance across all placements. Manages employment contracts, regulatory documentation, and dispute resolution under Sri Lankan and international employment law.' },
   { name: 'Afzal Faris', role: 'Recruitment Operations Manager', photo: '/afzal.jpeg', note: 'Oversees end-to-end recruitment operations — candidate sourcing, selection coordination, and employer liaison across all active markets.' },
-  { name: 'Arshad Sameemdeen', role: 'Sales & Marketing Manager', photo: '/arshad.png', note: 'Drives business development, client acquisition, and marketing strategy — building relationships with international employers and expanding Aaliya\'s reach across new markets.' },
+  { name: 'Arshad Sameemdeen', role: 'Sales & Marketing Manager', photo: '/arshad.jpg', note: 'Drives business development, client acquisition, and marketing strategy — building relationships with international employers and expanding Aaliya\'s reach across new markets.' },
 ]
 
 const officePhotos = [
