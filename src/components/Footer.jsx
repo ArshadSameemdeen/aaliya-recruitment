@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li>
                 <Phone size={16} />
-                <a href="tel:+94756041888">+94 756 041 888</a>
+                <a href="tel:+94112662933">+94 112 662 933</a>
               </li>
               <li>
                 <Mail size={16} />
