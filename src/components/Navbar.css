@@ -90,15 +90,21 @@
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    background: white;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-  }
-
   .navbar-toggle {
     display: flex;
   }
 
+  /* Scrolled state on mobile: white bar, dark icon */
+  .navbar.scrolled {
+    background: white;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  .navbar.scrolled .navbar-toggle {
+    color: var(--text-dark);
+  }
+
+  /* Dropdown menu always white */
   .navbar-links {
     display: none;
     position: absolute;
@@ -111,6 +117,17 @@
     gap: 4px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     align-items: stretch;
+  }
+
+  /* Dropdown links always dark (on white background) */
+  .navbar-links li a:not(.btn) {
+    color: var(--text-mid);
+  }
+
+  .navbar-links li a:not(.btn):hover,
+  .navbar-links li a:not(.btn).active {
+    color: var(--primary);
+    background: rgba(74, 24, 130, 0.06);
   }
 
   .navbar-links.open {
